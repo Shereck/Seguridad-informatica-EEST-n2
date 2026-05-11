@@ -6,19 +6,17 @@
 	/*Acentos*/--acentos: #00a8e8;
 	--verde:#166200;
 	--verde-claro:#64b859;
-	--verde-fluor:;
 	--verde-oscuro:#00c089;
-	--verde-aqua: #166200;
 	--rojo:#ff5757;
 	--color-texto: #7d4242;
 	--color-texto-titulo: #b66b6b;
-	--ancho-tubo: 40px;
+	--ancho-tubo: 3vw;
 	--ancho-tubo-text: calc(var(--ancho-tubo)*0.25);
-
+	--ancho-elementos: calc(100vw-var(--ancho-tubo));
 }
 #verde{
-		background-color: var(--verde-oscuro);
-	}
+	background-color: var(--verde-oscuro);
+}
 
 *{margin: 0px}
 
@@ -34,7 +32,7 @@ header{display: flex; flex-direction: row; background-color: var(--gris); width:
 	margin-right: var(--ancho-tubo);
 }
 aside{
-	width: 378px;
+	width: 23vw;
 	padding: 10px;
 	color:white;
 	background-image: linear-gradient(to left,var(--verde-claro),var(--verde-oscuro) 25%);
@@ -43,13 +41,14 @@ aside{
 	font-size: 84px;
 	border-right: solid 20px;
 	/*writing-mode: vertical-lr;*/
+	font-size: 5vw;
 }
 #titulo{
 	background-image: linear-gradient(to right,var(--fondos),#818d89);
 	-webkit-back
 	ground-clip: text; /* Essential for Chrome/Safari */
 	background-clip: text;
-	font-size: 150px;
+	font-size: 9vw;
 	font-weight: 300;
 	color: transparent;
 	text-align: center;
@@ -89,12 +88,13 @@ tuberias horizontales*/
 /*parrafos*/
 .texto-drch, .texto-izq{
 	/*! height: 705px; */
-	width: auto;
+	width: var(--ancho-elementos);
 	background-image: radial-gradient(var(--fondos),var(--fondos) 70%);
 	display: flex;
 	flex-direction: column;
 	/*! align-content: center; */
 	align-items: center;
+	padding-bottom: 20px;
 }
 .texto-izq{
 	
@@ -111,7 +111,7 @@ tuberias horizontales*/
 .titulo-texto, .texto{
 }
 .titulo-texto, .titulo-texto-comun{
-	font-size: 42px;
+	font-size: 8vw;
 	color: transparent;
 	background-image: linear-gradient(to left,var(--titulos),var(--texto));
 	-webkit-back
@@ -146,7 +146,7 @@ a{
 	background-color: white;
 	border-radius: 20px;
 	text-align: center;
-	font-size: 47px;
+	font-size: 9vw;
 	color: var(--color-texto);
 }
 .lista-index-item:hover{
@@ -160,4 +160,8 @@ a{
 		visibility: none;
 		background-color: transparent;
 	}
+}
+.espacio{
+	display: block;
+	height: 100px;
 }
